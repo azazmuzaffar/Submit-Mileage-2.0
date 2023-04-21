@@ -26,6 +26,17 @@ body {
   }
 }
 
+.body-font-style, .btn, .nice-select .current, .submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul li .dropdown-item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.27;
+}
+@media screen and (max-width: 767.98px) {
+  .body-font-style, .btn, .nice-select .current, .submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul li .dropdown-item {
+    font-size: 14px;
+  }
+}
+
 .container,
 .container-fluid {
   padding: 0px 20px;
@@ -54,8 +65,14 @@ h1,
 @media screen and (max-width: 767.98px) {
   h1,
   .h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .submit-mileage {
@@ -76,6 +93,11 @@ h1,
   align-items: start;
   margin-bottom: 32px;
 }
+@media screen and (max-width: 767.98px) {
+  .submit-mileage__title-block {
+    margin-bottom: 24px;
+  }
+}
 .submit-mileage__title-block .text-wrapper {
   flex-grow: 1;
 }
@@ -85,11 +107,24 @@ h1,
   margin-bottom: 4px;
   color: #347ab7;
 }
+@media screen and (max-width: 767.98px) {
+  .submit-mileage__title-block .text-wrapper h1 {
+    margin-bottom: 2px;
+  }
+}
+.submit-mileage__title-block .text-wrapper p {
+  color: #979797;
+}
+@media screen and (max-width: 767.98px) {
+  .submit-mileage__title-block .text-wrapper p {
+    font-size: 13px;
+  }
+}
 .submit-mileage__title-block .icon-wrapper {
   flex-shrink: 0;
 }
 .submit-mileage__title-block .icon-wrapper a {
-  color: black;
+  color: #121212;
 }
 .submit-mileage__title-block .icon-wrapper a:hover {
   color: #347ab7;
@@ -113,15 +148,63 @@ h1,
 .submit-mileage__map--leads .btn-group .btn-wrapper {
   width: 50%;
 }
+.submit-mileage__map--leads .btn-group .btn-wrapper > .btn {
+  padding: 12px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .submit-mileage__map--leads .btn-group .btn-wrapper:first-of-type .btn {
   border-top-left-radius: 6px;
 }
 .submit-mileage__map--leads .btn-group .btn-wrapper:last-of-type .btn {
   border-top-right-radius: 6px;
 }
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown {
+  position: relative;
+}
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul {
+  display: block;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 1px 8px rgba(32, 32, 32, 0.219);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul li .dropdown-item {
+  text-decoration: none;
+  padding: 12px;
+  background: white;
+  text-align: center;
+  color: rgb(94, 94, 94);
+}
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul li .dropdown-item:hover {
+  background: #f6f6f6;
+  color: rgb(94, 94, 94);
+}
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul li.active .dropdown-item {
+  background: #347ab7;
+  color: white;
+}
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown ul li:last-of-type .dropdown-item {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.submit-mileage__map--leads .btn-group .btn-wrapper.dropdown:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
 .submit-mileage__map--leads__inner {
   padding: 20px 16px;
-  border: 1px solid gray;
+  border: 1px solid #979797;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border-top: 0;
@@ -159,6 +242,7 @@ h1,
 }
 .submit-mileage__map--leads__inner .form-input .search-icon {
   left: 12px;
+  color: #979797;
 }
 .submit-mileage__map--leads__inner .form-input .filter-icon {
   width: 38px;
@@ -168,6 +252,7 @@ h1,
   right: 6px;
   background: #347ab7;
   cursor: pointer;
+  transition: 0.4s all ease;
 }
 .submit-mileage__map--leads__inner .form-input .filter-icon svg {
   position: absolute;
@@ -177,9 +262,17 @@ h1,
   width: 25px;
   color: white;
 }
+.submit-mileage__map--leads__inner .form-input .filter-icon:hover {
+  background: #23527b;
+}
 .submit-mileage__map .map-wrapper .map {
   width: 100%;
   min-height: 750px;
+}
+@media screen and (max-width: 767px) {
+  .submit-mileage__map .map-wrapper .map {
+    min-height: 450px;
+  }
 }
 
 /* Input Control */
@@ -194,10 +287,10 @@ h1,
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 6px;
-  color: black;
+  color: #979797;
 }
 .input-control .error-message {
   display: none;
@@ -218,27 +311,30 @@ h1,
 input[type=text],
 input[type=number],
 input[type=date],
-input[type=password] {
+input[type=password],
+.nice-select {
   position: relative;
   display: block;
   padding: 15px;
-  color: black;
-  border: 1px solid gray;
+  color: rgb(94, 94, 94);
+  border: 1px solid #979797;
   border-radius: 6px;
   background-color: white;
   height: 50px;
   width: 100%;
   outline: none;
   z-index: 1;
+  transition: 0.4s all ease;
 }
-input[type=text]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=password]::-moz-placeholder {
-  color: black;
+input[type=text]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=password]::-moz-placeholder, .nice-select::-moz-placeholder {
+  color: #979797;
 }
 input[type=text]::placeholder,
 input[type=number]::placeholder,
 input[type=date]::placeholder,
-input[type=password]::placeholder {
-  color: black;
+input[type=password]::placeholder,
+.nice-select::placeholder {
+  color: #979797;
 }
 input[type=text]:hover, input[type=text]:focus,
 input[type=number]:hover,
@@ -246,14 +342,77 @@ input[type=number]:focus,
 input[type=date]:hover,
 input[type=date]:focus,
 input[type=password]:hover,
-input[type=password]:focus {
+input[type=password]:focus,
+.nice-select:hover,
+.nice-select:focus {
   box-shadow: 0 0 10px rgb(235, 235, 235);
 }
-input[type=text]:focus,
+input[type=text]:focus, input[type=text]:hover,
 input[type=number]:focus,
+input[type=number]:hover,
 input[type=date]:focus,
-input[type=password]:focus {
+input[type=date]:hover,
+input[type=password]:focus,
+input[type=password]:hover,
+.nice-select:focus,
+.nice-select:hover {
   border-color: #347ab7;
+}
+
+/* Nice Select */
+.nice-select {
+  width: 100%;
+  padding: 4px 17px;
+  transition: 0.4s all ease;
+}
+.nice-select:hover, .nice-select:focus {
+  border-color: #347ab7;
+}
+.nice-select:after {
+  display: none;
+}
+.nice-select::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 1000 1000' enable-background='new 0 0 1000 1000' xml:space='preserve' fill='%23979797'%3E%3Cmetadata%3E Svg Vector Icons : http://www.onlinewebfonts.com/icon %3C/metadata%3E%3Cg%3E%3Cg transform='matrix(1 0 0 -1 0 1638)'%3E%3Cpath d='M10,1370.2c0,3.4,0.6,6.6,1.8,9.8s3.1,6,5.8,8.3c5,5,11.1,7.6,18.1,7.6s13.1-2.5,18.1-7.6L500,942.6l445.7,445.7c5,5,11.2,7.6,18.4,7.6s13.3-2.5,18.4-7.6c5-5,7.6-11.1,7.6-18.1s-2.5-13.1-7.6-18.1L518.1,887.7c-5-5-11.1-7.6-18.1-7.6c-7.1,0-13.1,2.5-18.1,7.6L17.6,1352c-2.7,2.4-4.6,5.1-5.8,8.3C10.6,1363.5,10,1366.8,10,1370.2L10,1370.2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: 0.4s all ease;
+}
+.nice-select.open::before {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.nice-select .current {
+  color: #979797;
+}
+.nice-select .list {
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 1px 8px rgba(32, 32, 32, 0.219);
+}
+.nice-select .list li {
+  padding: 17px;
+  line-height: 1;
+  background: white;
+  border: 0px;
+  font-weight: 500;
+  transition: 0.4s all ease;
+}
+.nice-select .list li.selected, .nice-select .list li.selected.focus {
+  background: #347ab7 !important;
+  background-color: #347ab7 !important;
+  color: white !important;
+}
+.nice-select .list li.selected:hover, .nice-select .list li.selected.focus:hover {
+  background: #2e6da3 !important;
+  color: white;
 }
 
 input[type=file] {
@@ -275,11 +434,15 @@ input[type=file] + label {
   color: rgb(94, 94, 94);
   padding: 16px 12px;
   height: 50px;
-  background-color: rgb(230, 230, 230);
-  border: 1px solid rgb(230, 230, 230);
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
   margin: 0;
   width: 100%;
   text-transform: capitalize;
+  transition: 0.4s all ease;
+}
+input[type=file] + label:hover {
+  background-color: gainsboro;
 }
 
 input[type=file] + label span {
@@ -306,6 +469,7 @@ input[type=file] + label svg {
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 6px;
+  transition: 0.4s all ease;
 }
 .btn.br-none {
   border-radius: 0;
@@ -319,12 +483,21 @@ input[type=file] + label svg {
   background: #347ab7;
   color: white;
 }
+.btn.btn-blue:hover {
+  background: #2b6597;
+}
 .btn.btn-orange {
   margin-top: auto;
   background: #e99a24;
   color: white;
 }
+.btn.btn-orange:hover {
+  background: #d98a16;
+}
 
+.table > :not(caption) > * > * {
+  border: 0;
+}
 .table tr td,
 .table tr th {
   font-size: 14px;
@@ -355,6 +528,13 @@ input[type=file] + label svg {
 .table tr th:last-of-type {
   border-top-right-radius: 6px;
 }
+.table tbody tr {
+  background: #f2f9ff;
+}
 .table tbody tr:nth-child(even) {
-  background: rgba(52, 122, 183, 0.1);
+  background: #c5e4ff;
+}
+.table tbody tr td {
+  color: rgb(143, 143, 143);
+  font-weight: 500;
 }/*# sourceMappingURL=app.css.map */
