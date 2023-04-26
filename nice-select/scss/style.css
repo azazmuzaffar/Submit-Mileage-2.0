@@ -21,7 +21,6 @@
   transition: all 0.2s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   white-space: nowrap;
   width: auto;
@@ -148,7 +147,6 @@ pre[class*=language-] {
   border-radius: 2px;
   color: #445870;
   -webkit-hyphens: none;
-      -ms-hyphens: none;
           hyphens: none;
   line-height: 1.5;
   -moz-tab-size: 4;
@@ -222,7 +220,7 @@ pre[class*=language-] {
 .language-css .token.string,
 .style .token.string {
   color: #a67f59;
-  background: hsla(0deg, 0%, 100%, 0.5);
+  background: hsla(0, 0%, 100%, 0.5);
 }
 
 .token.atrule,

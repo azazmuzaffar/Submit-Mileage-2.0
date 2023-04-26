@@ -161,7 +161,6 @@ h1,
 
                     &>.btn {
                         padding: 12px 10px;
-                        white-space: nowrap;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         display: flex;
@@ -563,17 +562,14 @@ input[type="file"]+label svg {
         th {
             font-size: 14px;
             font-weight: 500;
+            text-align: center;
 
             @media screen and (max-width: 767.98px) {
                 font-size: 12px;
             }
 
-            &:last-of-type {
-                text-align: right !important;
-            }
-
-            &:nth-last-child(2) {
-                text-align: left !important;
+            &:first-of-type {
+                text-align: left;
             }
         }
 
@@ -594,8 +590,14 @@ input[type="file"]+label svg {
 
     tbody {
         tr {
+            /*-------------------------------------*/
+            /* Table - All cells color */
+            /*-------------------------------------*/
             background: #f2f9ff;
 
+            /*-------------------------------------*/
+            /* Table - Even Cells Color */
+            /*-------------------------------------*/
             &:nth-child(even) {
                 background: #c5e4ff;
             }
