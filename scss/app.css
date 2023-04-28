@@ -215,6 +215,12 @@ h1,
     height: fit-content;
   }
 }
+@media screen and (max-width: 374.98px) {
+  .submit-mileage__map--leads__inner {
+    padding: 24px 0 0;
+    border: 0;
+  }
+}
 .submit-mileage__map--leads__inner form label {
   font-weight: 600;
   margin-bottom: 6px;
@@ -263,6 +269,9 @@ h1,
 }
 .submit-mileage__map--leads__inner .form-input .filter-icon:hover {
   background: #23527b;
+}
+.submit-mileage__map--leads .table-wrapper {
+  overflow: auto;
 }
 .submit-mileage__map .map-wrapper .map {
   width: 100%;
@@ -494,6 +503,9 @@ input[type=file] + label svg {
   background: #d98a16;
 }
 
+.table {
+  min-width: 320px;
+}
 .table > :not(caption) > * > * {
   border: 0;
 }
@@ -512,6 +524,19 @@ input[type=file] + label svg {
 .table tr td:first-of-type,
 .table tr th:first-of-type {
   text-align: left;
+}
+@media screen and (max-width: 767.98px) {
+  .table tr td:first-of-type,
+  .table tr th:first-of-type {
+    word-break: break-all;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .table tr td:first-of-type {
+    width: 100%;
+    max-width: 111px;
+    display: block;
+  }
 }
 .table tr th {
   background: #347ab7;

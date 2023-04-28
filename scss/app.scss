@@ -247,6 +247,11 @@ h1,
                     height: fit-content;
                 }
 
+                @media screen and (max-width: 374.98px) {
+                    padding: 24px 0 0;
+                    border: 0;
+                }
+
                 form {
                     label {
                         font-weight: 600;
@@ -305,6 +310,10 @@ h1,
                         }
                     }
                 }
+            }
+
+            .table-wrapper {
+                overflow: auto;
             }
         }
 
@@ -551,6 +560,7 @@ input[type="file"]+label svg {
 }
 
 .table {
+    min-width: 320px;
 
     &>:not(caption)>*>* {
         border: 0;
@@ -570,6 +580,21 @@ input[type="file"]+label svg {
 
             &:first-of-type {
                 text-align: left;
+
+                @media screen and (max-width: 767.98px) {
+                    word-break: break-all;
+                }
+            }
+        }
+
+        td {
+            &:first-of-type {
+
+                @media screen and (max-width: 767.98px) {
+                    width: 100%;
+                    max-width: 111px;
+                    display: block;
+                }
             }
         }
 
