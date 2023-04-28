@@ -581,7 +581,7 @@ input[type="file"]+label svg {
             &:first-of-type {
                 text-align: left;
 
-                @media screen and (max-width: 767.98px) {
+                @media screen and (max-width: 575.98px) {
                     word-break: break-all;
                 }
             }
@@ -590,7 +590,7 @@ input[type="file"]+label svg {
         td {
             &:first-of-type {
 
-                @media screen and (max-width: 767.98px) {
+                @media screen and (max-width: 575.98px) {
                     width: 100%;
                     max-width: 111px;
                     display: block;

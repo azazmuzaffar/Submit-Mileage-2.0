@@ -525,13 +525,13 @@ input[type=file] + label svg {
 .table tr th:first-of-type {
   text-align: left;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 575.98px) {
   .table tr td:first-of-type,
   .table tr th:first-of-type {
     word-break: break-all;
   }
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 575.98px) {
   .table tr td:first-of-type {
     width: 100%;
     max-width: 111px;
